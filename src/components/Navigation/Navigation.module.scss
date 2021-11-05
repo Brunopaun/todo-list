@@ -1,0 +1,15 @@
+@import '../../index.scss';
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    a {
+        color: map-get($dark-theme , 'lightgrayishblue');
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 25px;
+    }
+}

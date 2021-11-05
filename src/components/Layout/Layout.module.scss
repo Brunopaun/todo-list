@@ -1,0 +1,12 @@
+@import '../../index.scss';
+
+.layout {
+    width: 100vw;
+    height: 100vh;
+    background: map-get($dark-theme, 'verydarkblue');   
+}
+
+.img {
+    width: 100vw;
+    height: 33%;
+}

@@ -1,0 +1,31 @@
+$light-theme: ('verylightgray': hsl(0, 0%, 98%),
+              'verylightgrayish':hsl(236, 33%, 92%),
+              'lightgrayishblue': hsl(233, 11%, 84%),
+              'darkgrayishblue': hsl(236,9%,61%),
+              'verydarkgrayish': hsl(235,19%,35)
+              );
+
+$dark-theme: ('verydarkblue':hsl(235, 21%, 11%),
+             'verydarkdesaturated':hsl(235, 24%, 19%),
+             'lightgrayishblue': hsl(234, 39%, 85%),
+             'lightgrayishblueh-hover': hsl(236, 33%, 92%),
+             'darkgrayishblue': hsl(234, 11%, 52%),
+             'verydarkgrayishblue': hsl(233, 14%, 35%),
+             'verydarkgrayishblue-hover':hsl(237, 14%, 26%)
+             );
+
+$primary: ('bright': hsl(220, 98%, 61%), 
+           'background': linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%))
+           );
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+}
+

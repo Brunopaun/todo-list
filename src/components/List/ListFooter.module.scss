@@ -1,0 +1,39 @@
+@import '../../index.scss';
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 10px 0px 10px;
+    color: map-get($dark-theme , 'darkgrayishblue' );
+
+    span {
+        padding-top: 4px;
+        font-size: 15px;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+
+.listfooter {
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    a {
+        text-decoration: none;
+        color: map-get($dark-theme , 'darkgrayishblue' );
+    
+        &:hover {
+            color:map-get($primary , 'bright' )
+        }
+    }
+    
+}
