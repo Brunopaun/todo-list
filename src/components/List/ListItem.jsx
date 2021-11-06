@@ -5,11 +5,8 @@ const ListItem = (props)=> {
 
     return (
         <ItensWrapper className={classes.listitem}>
-            {props.text}
-            <label htmlFor={props.id} className={classes.checkbox}>
-                <input className={classes.input} type='checkbox' id={props.id}/>
-                <span className={classes.checkmark}></span>
-            </label>
+            <input className={classes.input} type='checkbox' id={props.id}/>
+            <label className={classes.label} htmlFor={props.id}>{props.text}</label>
         </ItensWrapper>
     )
 }

@@ -9,7 +9,7 @@ const List = () =>{
     return (
         <div className={classes.list}> 
             <div>
-                <ListItem text={'Finish this project in a week'}></ListItem>
+                <ListItem id={'1'} text={'Finish this project in a week'}></ListItem>
             </div>
             <ItensWrapper>  
                 <ListFooter/>                    
