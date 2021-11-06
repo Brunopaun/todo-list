@@ -1,6 +1,8 @@
 import React from 'react';
 import classes from './Navigation.module.scss';
 import ToggleThemeButton from './ToggleThemeButton';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import {ReactComponent as SunToggleIcon} from '../../assets/icon-sun.svg';
 import {ReactComponent as MoonToggleIcon} from '../../assets/icon-sun.svg';
