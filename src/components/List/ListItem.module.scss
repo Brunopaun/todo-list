@@ -5,6 +5,11 @@
     color: map-get($dark-theme , 'lightgrayishblue' );
 }
 
+.listitem_light {
+    border-bottom: 0.1px solid map-get($light-theme , 'lightgrayishblue');
+    color: map-get($light-theme, 'verydarkgrayish' );
+}
+
 .input{
     position: absolute;
     opacity: 0;
@@ -13,6 +18,14 @@
     position: relative;
     cursor: pointer;
     padding: 0;
+    width: 100%;
+
+    > a {
+        text-decoration: none;
+        position:relative;
+        left: 310px;
+        top: 4px;     
+     }
 }
 
  + label::before {

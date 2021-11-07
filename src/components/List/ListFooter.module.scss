@@ -13,7 +13,7 @@
         font-size: 15px;
     }
 
-    a {
+    > a {
         text-decoration: none;
         color: inherit;
     }
@@ -25,15 +25,5 @@
     text-decoration: none;
     display: flex;
     flex-direction: row;
-    gap: 20px;
-
-    a {
-        text-decoration: none;
-        color: map-get($dark-theme , 'darkgrayishblue' );
-    
-        &:hover {
-            color:map-get($primary , 'bright' )
-        }
-    }
-    
+    gap: 20px;    
 }

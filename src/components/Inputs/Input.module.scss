@@ -7,6 +7,13 @@
     color: map-get($dark-theme , 'lightgrayishblue' );
 }
 
+.inputmodule_light {
+    margin-top: 45px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    color: map-get($light-theme , 'verydarkgrayish' );
+}
+
 .form {
     display: flex;
     flex-direction: row;
@@ -36,4 +43,15 @@
         outline: none;
         font-size: 15px;
     }
+
+    .light {
+        height: 25px;
+        background: none;
+        border: none;
+        color: map-get($light-theme , 'verydarkgrayish' );
+        outline: none;
+        font-size: 15px;
+    }
+
+    
 }

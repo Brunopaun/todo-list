@@ -6,6 +6,12 @@
     background: map-get($dark-theme, 'verydarkblue');   
 }
 
+.layout_light {
+    width: 100vw;
+    height: 100vh;
+    background: map-get($light-theme, 'verylightgray');   
+}
+
 .img {
     width: 100vw;
     height: 33%;

@@ -1,0 +1,28 @@
+@import '../../index.scss';
+
+.footeritem {
+    text-decoration: none;
+    color: map-get($dark-theme , 'darkgrayishblue' );
+
+    &:hover {
+        color: map-get($dark-theme , 'lightgrayishblueh-hover' );
+    }
+
+    &:active {
+        color:map-get($primary , 'bright' )
+    }
+}
+
+.light {
+    text-decoration: none;
+    color: map-get($light-theme , 'darkgrayishblue' );
+
+    &:hover {
+        color: map-get($light-theme , 'verydarkgrayish' );
+    }
+
+    &:active {
+        color:map-get($primary , 'bright' )
+    }
+
+}
