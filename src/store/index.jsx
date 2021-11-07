@@ -4,6 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = { toggleStyle: false};
 
+const listInitialState = { list:[{id: 'p1', text: 'Finish this project in a week', checked: false}]} ;
 
 const toggleStyleSlicer = createSlice({
     name: 'togglestyle',
@@ -15,11 +16,27 @@ const toggleStyleSlicer = createSlice({
     }
 });
 
+const listSlicer = createSlice({
+    name: 'list',
+    initialState: listInitialState,
+    reducers:{
+        add(state, action) {
+            state.list.push(action.payload);
+        },
+        check(state,action) {
+            const  filter = state.list.findIndex(element => element.id === action.payload);
+            state.list[filter].checked = !state.list[filter].checked;
+        }
+    }
+})
+
 
 const store = configureStore({
-    reducer: { toggle: toggleStyleSlicer.reducer}
+    reducer: { toggle: toggleStyleSlicer.reducer, list: listSlicer.reducer} ,
 });
 
 export const toggleAction = toggleStyleSlicer.actions;
+
+export const listAction = listSlicer.actions;
 
 export default store;

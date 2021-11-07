@@ -8,7 +8,7 @@
         color: map-get($dark-theme , 'lightgrayishblueh-hover' );
     }
 
-    &:active {
+    &:focus {
         color:map-get($primary , 'bright' )
     }
 }
@@ -21,7 +21,7 @@
         color: map-get($light-theme , 'verydarkgrayish' );
     }
 
-    &:active {
+    &:focus {
         color:map-get($primary , 'bright' )
     }
 

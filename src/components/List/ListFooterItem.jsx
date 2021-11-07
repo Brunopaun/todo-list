@@ -6,9 +6,14 @@ const ListFooterItem = (props) => {
 
 const toggleState = useSelector(state => state.toggle.toggleStyle);
 
+function filterHandler(event){
+    event.preventDefault();
+    props.filter(props.text);
+}
+
     return (
         <li>
-            <a className={!toggleState ? classes.footeritem : classes.light} href='/'>{props.text}</a>
+            <a className={!toggleState ? classes.footeritem : classes.light} href='/' onClick={filterHandler}>{props.text}</a>
         </li>
     )
 }
