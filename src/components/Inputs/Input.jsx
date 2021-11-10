@@ -17,10 +17,12 @@ const dispatch = useDispatch();
 function addNewTaskHandler(event){
     event.preventDefault();
 
-    const newTask = {id: Math.random(), text: text.current.value, checked: false};
+    const newTask = {id: Math.floor(Math.random()*(100-1)+1), text: text.current.value, checked: "false"};
 
-    dispatch(listAction.add(newTask));
-    
+    if(newTask.text !== ""){
+        dispatch(listAction.add(newTask));
+    }
+    console.log(`${newTask.id}: ${newTask.text}`)
     text.current.value = "";
 }
 

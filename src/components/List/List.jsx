@@ -7,27 +7,41 @@ import { useSelector } from 'react-redux';
 
 const List = () =>{
 
-const initialState = useSelector(state => state.list.list);
+const state = useSelector(state => state.list.list);
 
-const [list, setList] = useState(initialState); 
+const [list, setList] = useState(state);
 
-function onfilteredData(filteredData){
-    console.log(filteredData);
+function onFilteredData(filteredData) {
     setList(filteredData);
 }
 
+function drop(event){
+    event.preventDefault();
+    const data = event.dataTransfer.getData('item_id');
+    const item = document.getElementById(data);
+    console.log(data);
+    event.target.appendChild(item);
+}
+
+function allowDrop(event) {
+    event.preventDefault();
+}
+
     return (
-        <div className={classes.list}> 
-            <div>
-                {list.map((item)=>{
-                    return <ListItem id={item.id} text={item.text}/>
+        <div className={classes.list}>
+            <div className={classes.droplist} onDrop={drop} onDragOver={allowDrop}>
+                {list.map((item)=> {
+                    return <ListItem key={item.id} id={item.id} text={item.text} draggable={'true'}/>
                 })}
             </div>
             <ItensWrapper>  
-                <ListFooter data={onfilteredData}/>                    
+                <ListFooter data={onFilteredData}/>                    
             </ItensWrapper>
         </div>
     )
+
 }
+
+
 
 export default List;

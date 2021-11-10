@@ -20,12 +20,10 @@
     padding: 0;
     width: 100%;
 
-    > a {
-        text-decoration: none;
-        position:relative;
-        left: 310px;
-        top: 4px;     
-     }
+    + a { 
+        padding-top: 7px;
+        padding-right: 10px;
+    }
 }
 
  + label::before {
@@ -40,7 +38,6 @@
     margin-right: 15px;
     border: 1px solid map-get($dark-theme , 'darkgrayishblue' );
     border-radius: 50%;
-
 } 
 
 &:hover + label::before {
@@ -48,7 +45,7 @@
 }
 
 
-&:checked + label:before {
+&:checked + label::before {
     background-repeat: no-repeat;
     background-position: center;
     background-image: url(../../assets/icon-check.svg), map-get($primary , 'background');

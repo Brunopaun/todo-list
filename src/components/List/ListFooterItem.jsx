@@ -12,7 +12,7 @@ function filterHandler(event){
 }
 
     return (
-        <li>
+        <li key={props.text}>
             <a className={!toggleState ? classes.footeritem : classes.light} href='/' onClick={filterHandler}>{props.text}</a>
         </li>
     )
