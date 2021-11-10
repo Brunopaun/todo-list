@@ -1,28 +1,28 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import classes from './ListFooter.module.scss';
 import ListFooterItem from './ListFooterItem';
+import { filterAction } from '../../store/index';
+import { listAction } from '../../store/index';
 
 const ListFooter = (props)=>{
-    
 
-    const list = useSelector(state => state.list.list);
-
+    const dispatch = useDispatch();
 
     function onFilterSelected(text){
 
         switch(text){
             case 'Active':
-                props.data(list.filter(element => element.checked === "false"));  
+                dispatch(filterAction.filter('Active'))  
             break;
 
             case 'Completed':
-                props.data(list.filter(element => element.checked === "true"));
+                dispatch(filterAction.filter('Completed'));
             break;
             
             case 'All':
-                props.data(list);
+                dispatch(filterAction.filter('All'));
             break
             default:
             break;    
@@ -31,13 +31,14 @@ const ListFooter = (props)=>{
  
     function removeAllHandler(event) {
         event.preventDefault();
+        dispatch(listAction.removeall());
     }
 
     return (
         <div className={classes.footer}>
-            <span>{list.filter(element=>element.checked === "false").length}</span>
+            <span>{props.data} items left</span>
                 <ul className={classes.listfooter}>
-                    <ListFooterItem text="All" filter={onFilterSelected}/>
+                    <ListFooterItem text="All" filter={onFilterSelected} />
                     <ListFooterItem text="Active" filter={onFilterSelected}/>
                     <ListFooterItem text="Completed" filter={onFilterSelected}/>
                 </ul> 

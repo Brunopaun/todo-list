@@ -32,16 +32,8 @@ const [crossIconActive, setCrossIconActive] = useState(false);
      dispatch(listAction.remove(event.currentTarget.id));
  }
 
- function drag(event){
-     event.dataTransfer.setData('item_id',event.target.id)
- }
-
- function dragOver(event){
-    event.stopPropagation();
- }
-
     return (
-        <div id={props.id} onMouseEnter={activeCrossIconHandler} onMouseLeave={desactiveCrossIconHandler} draggable={props.draggable} onDragStart={drag} onDragOver={dragOver}>
+        <div onMouseOver={activeCrossIconHandler} onMouseLeave={desactiveCrossIconHandler} >
             <ItensWrapper className={!toggleState ? classes.listitem : classes.listitem_light }>
                     <input className={classes.input} type='checkbox' id={props.id} />
                     <label className={classes.label} htmlFor={props.id}  onClick={onCheckItemHandler}>{props.text}</label>

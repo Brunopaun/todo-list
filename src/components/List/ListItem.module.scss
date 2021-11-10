@@ -40,7 +40,7 @@
     border-radius: 50%;
 } 
 
-&:hover + label::before {
+&:hover + label::before  {
     background: map-get($primary , 'background');
 }
 

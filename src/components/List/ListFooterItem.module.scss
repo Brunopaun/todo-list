@@ -6,12 +6,12 @@
 
     &:hover {
         color: map-get($dark-theme , 'lightgrayishblueh-hover' );
-    }
+    };
 
-    &:focus {
-        color:map-get($primary , 'bright' )
-    }
-}
+    &:focus  {
+        color:map-get($primary , 'bright' ) !important
+    }; 
+};
 
 .light {
     text-decoration: none;
@@ -19,10 +19,11 @@
 
     &:hover {
         color: map-get($light-theme , 'verydarkgrayish' );
-    }
+    };
 
     &:focus {
-        color:map-get($primary , 'bright' )
-    }
+        color:map-get($primary , 'bright' ) !important
+    };
 
 }
+

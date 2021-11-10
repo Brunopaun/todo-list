@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Layout from './components/Layout/Layout';
 import Wrapper from './components/UI/Wrapper';
 import Navigation from './components/Navigation/Navigation';
@@ -7,6 +8,7 @@ import List from './components/List/List';
 
 function App() {
   return (
+
     <Layout>
       <Wrapper>
       <Navigation/>
@@ -14,6 +16,7 @@ function App() {
       <List></List>
       </Wrapper>
     </Layout>
+
     );
 }
 
